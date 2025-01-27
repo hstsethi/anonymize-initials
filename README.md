@@ -27,4 +27,6 @@ T: L
 B: W
 ```
 
-Now we can simply subsistute them with `tr`, as it will be most efficent. Additionally, the result YAML be converted to JSON, encrypted with GPG.
+Now we can simply subsistute them with `tr`, as it will be most efficent, even more than sed. Additionally, the result YAML be converted to JSON, encrypted with GPG.
+
+Another way would be to create a dictionary of the results. Then pass that to replace function, however that would be less efficient and can cause collisions of values, not of keys, as dictionary doesn't allow duplicate keys.
