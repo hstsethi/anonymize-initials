@@ -2,13 +2,13 @@
 
 ## How Does It Work?
 
-There is no way to deanonmyize the initials as they arereplaced by random initials. The only ways to do so are: guess from context; save the output of print function. The output of print function is also valid YAML which can be further converted to JSON, or any other format.
+There is no way to deanonmyize the initials as they are replaced by random initials. The only ways to do so are: guess from context; save the output of print function. The output of print function is also valid YAML which can be further converted to JSON, or any other format.
 
 The script will take care itself of these conditions: the result is not same as key; the result is not "I"; the result is a char with values ranging from 65-90[A-Z]. You will have to handle collisions yourself.
 
 ## Usage
 
-To use this program, populate the `orignal_initials` tuple with the initials you want to anonmyize. While it is an tuple, consider it to be a **const set of chars**. It is recommended to only use upper case letters.
+To use this program, populate the `original_initials` tuple with the initials you want to anonymize. While it is an tuple, consider it to be a **const set of chars**. It is recommended to only use upper case letters.
 
 Example in C++ because Python does not have char: ```const std::set<char> original_initials = {'A', 'B', 'C'};```
 
