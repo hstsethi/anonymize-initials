@@ -10,6 +10,8 @@ The script will take care itself of these conditions: the result is not same as 
 
 To use this program, populate the `orignal_initials` tuple with the initials you want to anonmyize. While it is an tuple, consider it to be a **const set of chars**. It is recommended to only use upper case letters.
 
+Example in C++ because Python does not have char: ```const std::set<char> original_initials = {'A', 'B', 'C'};```
+
 
 Lets take a real life example. Below is a conversation from my Fanclub, as discussed in my [memoir](https://hstsethi.vercel.app/posts/lifestyle/lessons-learned-founding-internet-groups-memoir). Here the initials are alreadyanonymized, but we will do that again.
 
