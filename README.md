@@ -8,7 +8,7 @@ The script will take care itself of these conditions: the result is not same as 
 
 ## Usage
 
-To use this program, populate the `original_initials` tuple with the initials you want to anonymize. While it is an tuple, consider it to be a **const set of chars**. It is recommended to only use upper case letters.
+To use this program, populate the `ORIGINAL_INITIALS` tuple with the initials you want to anonymize. While it is an tuple, consider it to be a **const set of chars**. It is recommended to only use upper case letters.
 
 Example in C++ because Python does not have char: ```const std::set<char> original_initials = {'A', 'B', 'C'};```
 
@@ -31,4 +31,6 @@ B: W
 
 Now we can simply subsistute them with `tr`, as it will be most efficent, even more than sed. Additionally, the result YAML be converted to JSON, encrypted with GPG.
 
-Another way would be to create a dictionary of the results. Then pass that to replace function, however that would be less efficient and can cause collisions of values, not of keys, as dictionary doesn't allow duplicate keys.
+~~Another way would be to create a dictionary of the results. Then pass that to replace function, however that would be less efficient and can cause collisions of values, not of keys, as dictionary doesn't allow duplicate keys.~~
+
+You can also use `replace_initials_text.py` script to replace initials in text. It has same structure, doesn't uses dictionaries, uses same module as above script, but it's completely independent of it. It will write the output to same name as input, but prefixed with "anonmiyzed".
